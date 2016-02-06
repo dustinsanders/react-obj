@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import transform from '../../../src'
+import CustomComponent from './CustomComponent'
 
 const toTransform = {
   comp: 'div',
@@ -24,6 +25,10 @@ const toTransform = {
       comp: 'div',
       className: 'second-div',
       children: 'some text',
+    },
+    {
+      comp: CustomComponent,
+      text: 'should work',
     },
   ],
 }
