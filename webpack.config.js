@@ -1,5 +1,6 @@
 module.exports = {
   entry: './example/client',
+  devtool: 'cheap-module-source-map',
   output: {
     path: __dirname + '/public/scripts',
     filename: 'bundle.js',
