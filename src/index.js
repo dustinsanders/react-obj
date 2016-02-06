@@ -1,5 +1,4 @@
 "use strict"
-// import _ from 'lodash'
 const _ = require('lodash')
 
 const testObj = {
@@ -16,6 +15,23 @@ const testObj = {
               },
               h2: {
                 props: { className: 'my-h2' },
+                children: [
+                  {
+                    h3: {
+                      props: { className: 'my-h3' },
+                    },
+                    h4: {
+                      props: { classname: 'my-h4' },
+                      children: [
+                        {
+                          h5: {
+                            props: { className: 'my-h5' },
+                          },
+                        },
+                      ],
+                    },
+                  },
+                ],
               },
             },
           ],
@@ -25,57 +41,23 @@ const testObj = {
   },
 }
 
-const transform = (elements) => {
-  return elements.map((element, idx) => {
-    const keys = _.keys(element)
-
-    const key = keys[idx]
-    // console.log('----------------------')
-    // console.log(element)
-    // console.log('keys', keys, keys.length, key)
-    // console.log('----------------------')
+const transform = element => {
+  return _.keys(element).map(key => {
     const current = element[key]
     const children = current.children || []
+    const theChildren = children.map(child => transform(child))
 
-    return [
-      keys[0],
+    return _.compact([
+      key,
       current.props,
-      children.length ? transform(children) : [],
-    ]
+      theChildren.length
+      ? _.flatten(theChildren)
+      : null,
+    ])
   })
 }
 
-const transformObj = element => {
-  const keys = _.keys(element)
-  const key = keys[0]
-  const current = element[key]
 
-  const children = current.children || []
-  const theChildren = children.map(child => transformObj(child))
-
-  // console.log('\n-------------------------')
-  // // console.log('KEY', key)
-  // // console.log('SHOULD BE 1', keys.length)
-  // console.log('CURRENT', current)
-  // console.log('The children', theChildren)
-  // // console.log('CHILDREN', children)
-  // console.log('-------------------------\n')
-
-  // console.log('should be 1', keys.length)
-
-  return _.compact([
-    key,
-    current.props,
-    theChildren.length
-    ? theChildren
-    : null,
-  ])
-}
-
-// console.log(JSON.stringify(transform([testObj])[0]))
-// console.log('-------------------------------------------')
-// console.log(transform([testObj]))
-
-console.log(JSON.stringify(transformObj(testObj)))
+console.log(JSON.stringify(transform(testObj)))
 console.log('-------------------------------------------')
-console.log(transformObj(testObj))
+console.log(transform(testObj))
