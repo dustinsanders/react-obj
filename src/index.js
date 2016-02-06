@@ -1,4 +1,3 @@
-"use strict"
 const _ = require('lodash')
 
 const testObj = {
@@ -57,7 +56,8 @@ const transform = element => {
   })
 }
 
+const reactify = () => {}
 
-console.log(JSON.stringify(transform(testObj)))
+console.log(JSON.stringify(transform(testObj)[0]))
 console.log('-------------------------------------------')
 console.log(transform(testObj))
