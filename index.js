@@ -1,5 +1,4 @@
 "use strict";
-require('babel-register')({
-  ignore: false,
-});
-require('./src');
+if (require('piping')('./example/server.js')) {
+  require('./example/server');
+}
