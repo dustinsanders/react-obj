@@ -1,4 +1,4 @@
-# react-obj
+# rob
 
 ## TODO
 - better method of hooking into react (class, mixin)

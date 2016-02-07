@@ -1,7 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import transform from '../../../src'
+import transform, { init } from '../../../src'
 import CustomComponent from './CustomComponent'
+import StatelessComponent from './StatelessComponent'
+
+init(React)
 
 const toTransform = {
   comp: 'div',
@@ -33,4 +36,10 @@ const toTransform = {
   ],
 }
 
-ReactDOM.render(transform(React, toTransform), document.querySelector('.content'))
+ReactDOM.render(
+  transform({
+    comp: StatelessComponent,
+    text: 'should work',
+  }),
+  document.querySelector('.content')
+)
