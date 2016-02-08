@@ -1,11 +1,21 @@
-# rob
+# react-object
 represent DOM elements as objects in React, alternative to jsx
 
-<img src="./rob.png">
+## Benefits
+- One templating language
+- Programmatically compose components inline
+- No XML
+- Better use of es6 operators (spread)
+- One file type
+- Simple wrapper around React.createElement
+- Works with existing components written in jsx
+
+## Usage
 
 ## TODO
+- documentation and example
+- Unit Test
 - extend and export React
 - better method of hooking into react (class, mixin)
-- Unit Test
 - Object validator
 - CSON support

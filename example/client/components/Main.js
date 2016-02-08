@@ -1,12 +1,8 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import transform, { init } from '../../../src'
+import transform from '../../../src'
 import CustomComponent from './CustomComponent'
 import StatelessComponent from './StatelessComponent'
 
-init(React)
-
-const toTransform = {
+const Main = () => transform({
   comp: 'div',
   className: 'my-div',
   children: [
@@ -19,7 +15,7 @@ const toTransform = {
         },
         {
           comp: 'div',
-          onClick: () => {console.log('clicking my div')},
+          onClick: () => { console.log('clicking my div') },
           children: 'click me',
         },
       ],
@@ -27,19 +23,17 @@ const toTransform = {
     {
       comp: 'div',
       className: 'second-div',
-      children: 'some text',
+      children: ['first', 'second', 'third'].map(text => ({
+        comp: 'div',
+        key: text,
+        children: `this is the ${text} mapped child`,
+      })),
     },
     {
-      comp: CustomComponent,
+      comp: StatelessComponent,
       text: 'should work',
     },
   ],
-}
+})
 
-ReactDOM.render(
-  transform({
-    comp: StatelessComponent,
-    text: 'should work',
-  }),
-  document.querySelector('.content')
-)
+export default Main
