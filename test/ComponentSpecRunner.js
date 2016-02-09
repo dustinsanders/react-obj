@@ -8,6 +8,7 @@ init(React)
 
 const paths = [
   './testComponents/SimpleComponent',
+  './testComponents/SimpleNestedComponent',
 ]
 
 paths.map(path => {
