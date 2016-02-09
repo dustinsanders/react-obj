@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node index.js",
     "src": "node src/register.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava"
   },
   "keywords": [
     "react",
@@ -17,6 +17,7 @@
   "author": "Dustin Sanders",
   "license": "ISC",
   "devDependencies": {
+    "ava": "^0.11.0",
     "babel": "^6.3.26",
     "babel-core": "^6.4.5",
     "babel-eslint": "^4.1.8",

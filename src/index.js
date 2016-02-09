@@ -30,7 +30,7 @@ const transform = ({ comp, children, ...props }) => {
     return createElement(...toReturn)
   }
 
-  console.error('react-object must be initiazlies before use')
+  throw new Error('react-object must be initialized before use')
 }
 
 export { init, transform }
