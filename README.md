@@ -18,4 +18,3 @@ represent DOM elements as objects in React, alternative to jsx
 - extend and export React
 - better method of hooking into react (class, mixin)
 - Object validator
-- CSON support
