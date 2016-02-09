@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "node index.js",
     "src": "node src/register.js",
-    "test": "ava"
+    "test": "ava --fail-fast"
   },
   "keywords": [
+    "object",
     "react",
     "jsx",
     "xml",
@@ -19,7 +20,7 @@
   "devDependencies": {
     "ava": "^0.11.0",
     "babel": "^6.3.26",
-    "babel-core": "^6.4.5",
+    "babel-core": "^6.5.1",
     "babel-eslint": "^4.1.8",
     "babel-helpers": "^6.4.5",
     "babel-loader": "^6.2.2",
@@ -27,6 +28,7 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
     "babel-register": "^6.4.3",
+    "enzyme": "^1.5.0",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^5.0.0",
     "eslint-plugin-react": "^3.16.1",
@@ -34,6 +36,7 @@
     "lodash.isarray": "^4.0.0",
     "piping": "^0.3.0",
     "react": "^0.14.7",
+    "react-addons-test-utils": "^0.14.7",
     "react-dom": "^0.14.7",
     "webpack": "^1.12.13",
     "webpack-dev-middleware": "^1.5.1"
