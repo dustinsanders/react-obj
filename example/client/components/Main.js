@@ -1,6 +1,7 @@
 import transform from '../../../src'
-import CustomComponent from './CustomComponent'
+import CreateClassComponent from './CreateClassComponent'
 import StatelessComponent from './StatelessComponent'
+import ExtendClassComponent from './ExtendClassComponent'
 
 const Main = () => transform({
   comp: 'div',
@@ -23,15 +24,26 @@ const Main = () => transform({
     {
       comp: 'div',
       className: 'second-div',
-      children: ['first', 'second', 'third'].map(text => ({
-        comp: 'div',
-        key: text,
-        children: `this is the ${text} mapped child`,
-      })),
+      children: [
+        {
+          comp: 'ol',
+          children: ['first', 'second', 'third'].map(text => ({
+            comp: 'div',
+            key: text,
+            children: `this is the ${text} mapped child`,
+          })),
+        },
+      ],
     },
     {
       comp: StatelessComponent,
       text: 'should work',
+    },
+    {
+      comp: CreateClassComponent,
+    },
+    {
+      comp: ExtendClassComponent,
     },
   ],
 })

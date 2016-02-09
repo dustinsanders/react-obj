@@ -1,5 +1,5 @@
 {
-  "name": "rob",
+  "name": "react-object",
   "version": "0.0.1",
   "description": "represent DOM elements as objects in React, alternative to jsx",
   "main": "index.js",

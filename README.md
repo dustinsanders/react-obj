@@ -3,8 +3,8 @@ represent DOM elements as objects in React, alternative to jsx
 
 ## Benefits
 - One templating language
-- Programmatically compose components inline
-- No XML
+- Programmatically compose components inline (map, conditionals, etc)
+- Javascript everywhere, no XML
 - Better use of es6 operators (spread)
 - One file type
 - Simple wrapper around React.createElement

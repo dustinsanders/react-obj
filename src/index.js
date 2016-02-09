@@ -1,7 +1,10 @@
 import isArray from 'lodash.isarray'
 
-let createElement = undefined
-const init = (React) => createElement = React.createElement
+let { React, createElement } = {}
+const init = (...args) => {
+  React = args[0]
+  createElement = React.createElement
+}
 
 const transform = ({ comp, children, ...props }) => {
   if (createElement) {
@@ -10,7 +13,7 @@ const transform = ({ comp, children, ...props }) => {
         return [children]
       }
       else if (isArray(children)) {
-        return children.map(child => transform(child))
+        return children.map(transform)
       }
 
       return [null]
@@ -27,7 +30,7 @@ const transform = ({ comp, children, ...props }) => {
     return createElement(...toReturn)
   }
 
-  console.error('rob must be initiazlies before use')
+  console.error('react-object must be initiazlies before use')
 }
 
 export { init, transform }

@@ -1,12 +1,12 @@
 import transform from '../../../src'
-import CustomComponent from './CustomComponent'
+import JSXComponent from './JSXComponent'
 
 const StatelessComponent = ({ text }) => transform({
   comp: 'div',
   className: 'my-stateless-componet',
   children: [
     {
-      comp: CustomComponent,
+      comp: JSXComponent,
       className: 'my-custom-component',
       text,
     },

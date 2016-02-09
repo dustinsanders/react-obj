@@ -1,9 +1,9 @@
 import React from 'react'
 
-const CustomComponent = ({ text }) => (
+const JSXComponent = ({ text }) => (
   <div>
     My Custom Component {text}
   </div>
 )
 
-export default CustomComponent
+export default JSXComponent
