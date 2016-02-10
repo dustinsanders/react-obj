@@ -33,7 +33,7 @@ represent DOM elements as objects in React, alternative to jsx
     comp: 'div',
     children: numbers.map(number => (
       comp: 'div',
-      key: 'number',
+      key: number,
       children: `Counting to ${number}`
     })),
   })
