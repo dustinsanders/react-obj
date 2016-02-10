@@ -88,9 +88,8 @@ Represent DOM elements as objects in React, alternative to jsx
 - Can use with Stateless Components, React createClass, and extending React.Component
 
 ## TODO
-- documentation and example
-- Unit Test
+- more documentation
+- more unit tests
 - allow users to set tag name
-- extend and export React
-- better method of hooking into react (class, mixin)
 - Object validator
+- possibly add better method of hooking into react (class, mixin)
