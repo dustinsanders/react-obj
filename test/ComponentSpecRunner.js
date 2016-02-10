@@ -10,6 +10,7 @@ const components = [
   'SimpleComponent',
   'SimpleNestedComponent',
   'CompositeComponent',
+  'ThirdPartyComponent',
 ]
 
 components.map(component => {
