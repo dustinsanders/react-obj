@@ -57,6 +57,7 @@ represent DOM elements as objects in React, alternative to jsx
     )
   }
 
+  //react-obj
   const Alternative = (props) => {
     const { text, value } = props
 
@@ -79,17 +80,12 @@ represent DOM elements as objects in React, alternative to jsx
   }
 
 ```
-
+#### Further Considerations
 - Javascript everywhere, no XML
 - One file type
 - Simple wrapper around React.createElement
 - Works with existing components written in jsx
 - Can use with Stateless Components, React createClass, and extending React.Component
-
-## Negatives
-- Usually more lines of code
-
-## Usage
 
 ## TODO
 - documentation and example
