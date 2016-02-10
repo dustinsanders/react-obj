@@ -7,8 +7,9 @@ import transform, { init } from '../src'
 init(React)
 
 const paths = [
-  './testComponents/SimpleComponent',
+  'SimpleComponent',
   './testComponents/SimpleNestedComponent',
+  './testComponents/CompositeComponent',
 ]
 
 paths.map(path => {
