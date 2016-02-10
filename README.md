@@ -1,7 +1,7 @@
 # react-object
-represent DOM elements as objects in React, alternative to jsx
+Represent DOM elements as objects in React, alternative to jsx
 
-## Benefits
+## Overview
 
 #### One templating language
 ```javascript
