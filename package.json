@@ -49,5 +49,8 @@
   },
   "dependencies": {
     "lodash.isarray": "^4.0.0"
-  }
+  },
+  "peerDependencies": {
+    "react": "0.14.x"
+  },
 }
