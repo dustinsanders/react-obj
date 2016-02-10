@@ -6,15 +6,15 @@ import transform, { init } from '../src'
 
 init(React)
 
-const paths = [
+const components = [
   'SimpleComponent',
-  './testComponents/SimpleNestedComponent',
-  './testComponents/CompositeComponent',
+  'SimpleNestedComponent',
+  'CompositeComponent',
 ]
 
-paths.map(path => {
-  const { jsx, rob, props = null } = require(path)
-  test(path, async t => {
+components.map(component => {
+  const { jsx, rob, props = null } = require(`./testComponents/${component}`)
+  test(component, async t => {
     const jsxInstance = shallow(React.createElement(() => jsx, props))
     const robInstance = shallow(React.createElement(() => transform(rob), props))
 

@@ -1,4 +1,4 @@
-# react-object
+# react-obj
 Represent DOM elements as objects in React, alternative to jsx
 
 ## Overview
