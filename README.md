@@ -2,6 +2,7 @@
 Represent DOM elements as objects in React, alternative to jsx.
 
 [Github repo](https://github.com/dustinsanders/react-obj)
+
 [npm module](https://www.npmjs.com/package/react-obj)
 
 ## Motivation
