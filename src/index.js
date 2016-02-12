@@ -12,7 +12,7 @@ const transform = ({ comp, children, ...props }) => {
       if (typeof children === 'string') {
         return [children]
       }
-      else if (isArray(children)) {
+      else if (Array.isArray(children)) {
         return children.map(transform)
       }
 

@@ -48,9 +48,6 @@
     "webpack": "^1.12.13",
     "webpack-dev-middleware": "^1.5.1"
   },
-  "dependencies": {
-    "lodash.isarray": "^4.0.0"
-  },
   "peerDependencies": {
     "react": "0.14.x"
   }
