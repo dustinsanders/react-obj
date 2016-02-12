@@ -1,5 +1,8 @@
 # react-obj
-Represent DOM elements as objects in React, alternative to jsx
+Represent DOM elements as objects in React, alternative to jsx.
+
+[Github repo](https://github.com/dustinsanders/react-obj)
+[npm module](https://www.npmjs.com/package/react-obj)
 
 ## Motivation
 The great part of React, compared to other UI frameworks, is that it extends javascript instead of attempting to extend HTML. react-obj takes this approach a step further by allowing components to be created with plain javascript objects allowing for a powerful and familiar development experience. Thus not needing XML, nor another file type.
