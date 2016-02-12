@@ -107,7 +107,8 @@ init(React)
 #### Need to Know
 Every object is required to have a `comp` property which represents the component that you want to render. The `comp` property can either be a string for standard elements(div, span, etc) or a react component. The other important property is `children`. The `children` property can either be a string you want rendered into the parent component, or it can be an array of further components to render. Every other property will be passed down as props.
 
-`comp`: either a string('div', 'span') or a React Component *required*
+`comp`: either a string('div', 'span') or a React Component
+
 `children`: a string or an array of further compliant objects
 
 #### Usage
