@@ -1,6 +1,9 @@
 # react-obj
 Represent DOM elements as objects in React, alternative to jsx
 
+## Motivation
+The great part of React, compared to other UI frameworks, is that it extends javascript instead of attempting to extend HTML. react-obj takes this approach a step further by allowing components to be created with plain javascript objects allowing for an powerful and familiar development experience. Thus not needing XML, nor another file type.
+
 ## Overview
 
 #### One templating language
@@ -31,7 +34,7 @@ Represent DOM elements as objects in React, alternative to jsx
   //react-obj
   transform({
     comp: 'div',
-    children: numbers.map(number => (
+    children: numbers.map(number => ({
       comp: 'div',
       key: number,
       children: `Counting to ${number}`
@@ -102,7 +105,7 @@ init(React)
 ```
 
 #### Need to Know
-Every object is require to have a `comp` property which represents the component that you want to render. The `comp` property can either be a string for standard elements(div, span, etc) or a react component. The other important property is `children`. The `children` property can either be string of text that you want rendered into the parent component, or it can be an array of further components to render. Every other property will be passed down as props.
+Every object is required to have a `comp` property which represents the component that you want to render. The `comp` property can either be a string for standard elements(div, span, etc) or a react component. The other important property is `children`. The `children` property can either be string of text that you want rendered into the parent component, or it can be an array of further components to render. Every other property will be passed down as props.
 
 #### Usage
 ```javascript
@@ -137,8 +140,7 @@ class ExtendClassComponent extends React.Component {
 }
 ```
 
-
-## TODO
-- allow users to `comp` property name
+## Future
+- allow users to set the key in the object that represents the component
 - Object validator
-- possibly add better method of hooking into react (class, mixin)
+- possibly add better method of hooking into react (class, mixin), thus not needing to call transform directly
