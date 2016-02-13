@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "represent DOM elements as objects in React, alternative to jsx",
   "main": "lib/index.js",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/dustinsanders/react-obj"
+  },
   "scripts": {
     "build": "babel src/index.js --out-file lib/index.js",
     "clean": "rm -rf lib/",
