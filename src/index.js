@@ -1,5 +1,3 @@
-import isArray from 'lodash.isarray'
-
 let { React, createElement } = {}
 const init = (...args) => {
   React = args[0]
