@@ -1,24 +1,33 @@
-import 'babel-register'
+import './_setup'
 import React from 'react'
 import test from 'ava'
 import { shallow } from 'enzyme'
-import transform, { init } from '../src'
 
-init(React)
+const shallowRender = (comp, props) =>
+  shallow(React.createElement(comp, props))
 
-const components = [
+const testRenderedHtml = (description, { jsx, rob, props = null }) => {
+  test(description, async t =>
+    t.same(shallowRender(jsx, props).html(), shallowRender(rob, props).html())
+  )
+}
+
+//Testing html equality
+[
+  'CompositeComponent',
   'SimpleComponent',
   'SimpleNestedComponent',
-  'CompositeComponent',
+  'SimplePropsComponent',
   'ThirdPartyComponent',
-]
+].map(componentName =>
+  testRenderedHtml(componentName, require(`./testComponents/${componentName}`))
+)
 
-components.map(component => {
-  const { jsx, rob, props = null } = require(`./testComponents/${component}`)
-  test(component, async t => {
-    const jsxInstance = shallow(React.createElement(() => jsx, props))
-    const robInstance = shallow(React.createElement(() => transform(rob), props))
-
-    t.same(jsxInstance.html(), robInstance.html())
-  })
+//Testing Event Handlers
+test('onClick should fire for SimplePropsComponent', async t => {
+  const { props, rob } = require('./testComponents/SimplePropsComponent')
+  const instance = shallowRender(rob, props)
+  t.is(props.onClick.called, false)
+  instance.find('span').simulate('click')
+  t.is(props.onClick.called, true)
 })

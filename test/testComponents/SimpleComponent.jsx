@@ -1,11 +1,13 @@
 import React from 'react'
+import transform from '../../src'
 
-const jsx =
+const jsx = () => (
   <div>
     <span>text</span>
   </div>
+)
 
-const rob = {
+const rob = () => transform({
   comp: 'div',
   children: [
     {
@@ -13,6 +15,6 @@ const rob = {
       children: 'text',
     },
   ],
-}
+})
 
 export { jsx, rob }

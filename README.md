@@ -89,6 +89,7 @@ The great part of React, compared to other UI frameworks, is that it extends jav
 ```
 #### Further Considerations
 - Javascript everywhere, no XML
+- Better linting
 - One file type
 - Simple wrapper around React.createElement
 - Works with existing components written in jsx

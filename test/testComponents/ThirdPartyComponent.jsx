@@ -1,5 +1,6 @@
 import React from 'react'
 import Select from 'react-select'
+import transform from '../../src'
 
 const options = [
   { value: 1, label: 'one' },
@@ -10,7 +11,7 @@ const onChange = () => console.log('i am changing')
 const name = 'select-name'
 const value = 'one'
 
-const jsx = (
+const jsx = () => (
   <div>
     <div>
       <span>
@@ -26,7 +27,7 @@ const jsx = (
   </div>
 )
 
-const rob = {
+const rob = () => transform({
   comp: 'div',
   children: [
     {
@@ -51,6 +52,6 @@ const rob = {
       value,
     },
   ],
-}
+})
 
 export { jsx, rob }

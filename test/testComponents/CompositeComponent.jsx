@@ -1,20 +1,26 @@
 import React from 'react'
+import transform from '../../src'
 
 const SimpleComponent = require('./SimpleComponent')
 const SimpleNestedComponent = require('./SimpleNestedComponent')
 
-const jsx =
+const jsx = () => (
   <div>
-    {SimpleComponent.jsx}
-    {SimpleNestedComponent.jsx}
+    <SimpleComponent.jsx />
+    <SimpleNestedComponent.jsx />
   </div>
+)
 
-const rob = {
+const rob = () => transform({
   comp: 'div',
   children: [
-    SimpleComponent.rob,
-    SimpleNestedComponent.rob,
+    {
+      comp: SimpleComponent.rob,
+    },
+    {
+      comp: SimpleNestedComponent.rob,
+    },
   ],
-}
+})
 
 export { jsx, rob }

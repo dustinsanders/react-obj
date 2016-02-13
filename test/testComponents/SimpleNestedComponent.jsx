@@ -1,6 +1,7 @@
 import React from 'react'
+import transform from '../../src'
 
-const jsx =
+const jsx = () => (
   <div>
     <div className="first-inner-div">
       <h1>Heading One</h1>
@@ -13,8 +14,9 @@ const jsx =
       <span>span 3</span>
     </div>
   </div>
+)
 
-const rob = {
+const rob = () => transform({
   comp: 'div',
   children: [
     {
@@ -38,6 +40,6 @@ const rob = {
       ],
     },
   ],
-}
+})
 
 export { jsx, rob }
