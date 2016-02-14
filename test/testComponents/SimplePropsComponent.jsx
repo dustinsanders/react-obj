@@ -1,5 +1,4 @@
 import React from 'react'
-import { stub } from 'sinon'
 import transform from '../../src'
 
 const jsx = ({ onClick }) => (
@@ -18,8 +17,4 @@ const rob = ({ onClick }) => transform({
   ],
 })
 
-const props = {
-  onClick: stub(),
-}
-
-export { jsx, props, rob }
+export { jsx, rob }
