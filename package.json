@@ -1,6 +1,6 @@
 {
   "name": "react-obj",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "represent DOM elements as objects in React, alternative to jsx",
   "main": "lib/index.js",
   "repository": {
